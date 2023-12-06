@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOL</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bar{
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgba(255, 0, 0, 0.5),rgba(255,0,0,0.5)),url(school\ background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bar1{
+            margin-top: -100px;
+            height: 450px;
+            width: 650px;
+            text-align: center;
+            color: white;
+        }
+        #checks{
+            margin-bottom: 10px;
+            background-color: yellow;
+            border: 0px;
+            margin-top: 25px;
+            height: 70px;
+            width: 250px;
+            font-size: 30px;
+            transition: 0.5s;
+            font-weight: bold;
+        }
+        #checks:hover{
+            background:linear-gradient(red,yellow)
+        }
+        .yellow{
+            color: yellow;
+        }
+        #text{
+            /* width: 200px;   
+            height: auto;
+            background-color: white;
+            margin-inline: 30px;
+            margin-block: 30px;
+            border-radius: 10px; */
+        }
+        .type h2{
+            padding-top: 25px;
+        }
+        hr{
+            margin: 20px;
+            border: 5px solid white;
+        }
+
+        /* Baddest Responsiveness!!!!!!!!!!!!!!!!! */
+        @media screen and (max-width: 730px){
+            .bar1 h1{
+            font-size: 20px;
+            }
+            .bar1 h2{
+            font-size: 20px;
+            }
+            .type h2{
+            padding-top: 20px;
+        }
+            #checks{
+            margin-bottom: 10px;
+            background-color: yellow;
+            border: 0px;
+            margin-top: 25px;
+            height: 35px;
+            width: 200px;
+            font-size: 25px;
+            transition: 0.5s;
+            font-weight: bold;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="bar1">
+            <h1>WELCOME TO SUCCESS SCHOOL</h1>
+            <br>
+            <h1><span class="yellow">CHECK YOUR SUBJECTS HERE</span></h1>
+
+            <div class="type">
+                <h2>FOR WAEC CANDIDATES </h2>
+                <button type="button" id="checks" onclick="check()">CLICK HERE</button>
+            </div>
+            <center><div id="text1"></div></center>
+
+            <hr>
+            <div class="type">
+                <h2>FOR JAMB CANDIDATES </h2>
+                <button type="button" id="checks" onclick="checktwo()">CLICK HERE</button>
+            </div>
+    
+            <center><div id="text"></div></center>
+    
+        </div>
+    </div>
+
+
+    
+
+    <script>
+        var check =function(){
+            var studentName=prompt("Enter your Name")
+            var department=prompt("(1)Science, (2)Commercial, (3)Arts")
+            var note=document.getElementById("text1");
+            department=parseInt(department)
+            
+            if (department=="1"){
+                note.innerHTML=(`Dear ${studentName} your SCIENCE subjects are: General Mathematics, English Language, Civic Education, Biology, Chemistry, Physics, Geography, Further Mathematics and ONE TRADE SUBJECT(Data Processing, Catering Craft Practice, Book Keeping).`);
+            }
+            else if (department=="2"){
+                note.innerHTML=(`Dear ${studentName} your COMMERCIAL subjects are: General Mathematics, English Language, Civic Education, Economics, Financial Accounting, Commerce, Government, Office Practice, ONE TRADE SUBJECT (Data Procesing, Book Keeping, Catering Craft)`);
+            }
+            else if (department=="3"){
+                note.innerHTML=(`Dear ${studentName} your ARTS subjects are: General Mathematics, English Language, Civic Education, Literature in English, Government/History, CRS/IRS, Language(Igbo/Hausa/Yoruba), Economics ONE TRADE SUBJECT (Data Processing, Dyeing & Bleaching, Catering Craft)`);
+            }
+            else{
+                note.innerHTML=(`Invalid department`);
+            }
+        }
+
+
+
+
+        var checktwo =function(){
+            var studentName=prompt("Enter your Name")
+            var course=prompt("(1)Law, (2)Computer Science, (3)Medicine and Surgery, (4)Architecture, (5)Accounting, (6)Pharmacy, (7)Microbiology, (8)Medical Laboratory Science, (9)Mathematics, (10)Economics, (11)Mass Communication, (12)Business Administration (13)English Language")
+            var note=document.getElementById("text");
+            course=parseInt(course)
+            
+            if (course=="1"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for LAW are: Use of English, Literature-In-Eng, Government and Economics.`);
+            }
+            else if (course=="2"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for COMPUTER SCIENCE are: Use of English, Mathematics, Physics and Chemistry.`);
+            }
+            else if (course=="3"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for MEDICINE AND SURGERY are: Use of English, Biology, Chemistry and Physics.`);
+            }
+            else if (course=="4"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for ARCHITECTURE are: Use of English, Mathematics, Physics and Chemistry.`);
+            }
+            else if (course=="5"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for ACCOUNTING are: Use of English, Mathematics, Economics and Principles of Accounting.`);
+            }
+            else if (course=="6"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for PHARMACY are: Use of English, Physics, Chemistry and Biology.`);
+            }
+            else if (course=="7"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for MICROBIOLOGY are: Use of English, Biology, Chemistry and Physics.`);
+            }
+            else if (course=="8"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for MEDICAL LABORATORY SCIENCE are: Use of English, Biology, Chemistry and Physics.`);
+            }
+            else if (course=="9"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for MATHEMATICS are: Use of English, Physics, Further Mathematics and Chemistry.`);
+            }
+            else if (course=="10"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for ECONOMICS are: Use of English, Mathematics, Economics and Principles of Accounting.`);
+            }
+            else if (course=="11"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for MASS COMMUNICATION are: Use of English, Literature-In-English, Government and Economics.`);
+            }
+            else if (course=="12"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for BUSINESS ADMINISTRATION are: Use of English, Mathematics, Physics and Chemistry`);
+            }
+            else if (course=="13"){
+                note.innerHTML=(`Dear ${studentName} your JAMB compulsory for ENGLISH LANGUAGE are: Use of English, Literature-In-English, CRS, Government/History.`);
+            }
+            else{
+                note.innerHTML=(`Invalid department`);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
